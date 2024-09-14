@@ -9,6 +9,5 @@ class Query(BaseModel):
     texto: str
 
 @app.post("/")
-async def insertar_query(query: Query):
-    frase_completa = f"Hola, {query.texto}"
-    return {"frase_resultante": frase_completa}
+def insertar_query(query: Query):
+    return {"frase_resultante": f"Hola, {query.texto}"}
